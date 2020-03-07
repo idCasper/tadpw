@@ -1,3 +1,8 @@
+$(window).on('load', function(){
+  $('#section-1 img').addClass('aniLTR');
+  $('#section-1 svg:last-child').addClass('aniLTR');
+});
+
 $(window).scroll(function(){
 	if ($(this).scrollTop() > 0) {
 		console.log($(this).scrollTop());
