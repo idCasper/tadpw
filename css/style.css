@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Roboto|Montserrat:700&display=swap');
 
-body {
+html, body {
 	padding: 0;
 	margin: 0;
 	background-color: #f3f9ff !important; 
 	color: #53545e;
 	font-family: 'Montserrat';
+}
+
+section {
+	margin-bottom: 5%;
 }
 
 .my-header {
@@ -70,17 +74,12 @@ body {
 }
 
 /* Section 1 */
-#section-1 {
-	margin-top: 4%;
-	margin-bottom: 5%;
-}
-
-#section-1 .container .row {
-	margin-right: -74.5px;
+#section-1 .container .row:first-child {
+	margin-right: -6.66%;
 }
 
 #section-1 .site-title {
-	margin-top: 10%;
+	margin-top: 20%;
 	margin-bottom: 3%;
 	font-size: 48px;
 }
@@ -89,23 +88,52 @@ body {
 	font-size: 14px;
 }
 
+#section-1 img {
+	width: 100%;
+	height: 100%;
+}
+
+#section-1 svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#section-1 svg #green-pie {
+	animation-duration: 1.3s;
+	animation-name: animatePie;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#section-1 .cari-tahu {
+	padding-top: 3%;
+}
+
+#section-1 .cari-tahu p {
+	margin: 4px 32px 0px auto;
+	font-size: 16px;
+}
+
+#section-1 .cari-tahu i {
+	display: inline-block;
+	padding: 4px;
+	background-color: #fc6681;
+	color: #f3f9ff;
+	border-radius: 100%;
+	font-size: 24px;
+}
+
+@keyframes animatePie {
+	from {
+		transform: translate(-34px, -68px);
+	}
+	to {
+		transform: translate(-16px, -77px);
+	}
+}
 
 /* Section 2 */
-#section-2 {
-	margin-top: 4%;
-	margin-bottom: 5%;
-	padding-top: 2%;
-}
-
-#section-2 .site-desc {
-	margin: 8px 32px 0px auto;
-}
-
-#section-2 .container .row .site-desc .btn {
-	width: 40px;
-	height: 40px;
-}
-
 #section-2 .card-body .btn {
 	padding: 2px 12px;
 }
@@ -128,67 +156,12 @@ body {
 	color: #75767e !important;
 }
 
-.heading-1 {
-	font-size: 39px;
-	margin-bottom: 3%;
-}
-
-#section-2 .para-1 {
-	margin-top: 4%;
-	margin-bottom: 4%;
-	font-size: 20px;
-	text-align: justify;
-}
-
-.btn-read-more {
-	background-color: #6cee9c !important;
-	color: #f5f5f5 !important;
-	transition: all 0.5s ease-in;
-}
-
-.btn-read-more:hover {
-	background-color: #f5f5f5 !important;
-	border: 1px solid #6cee9c;
-	color: #53545e !important;
-}
-
 #section-2 .swiper-container {
 	width: 100%;
 	height: 100%;
 }
 
 /* Section 3 */
-#section-3 .d-flex.justify-content-end {
-	background-image: url('../img/bg-section-3.jpg');
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: cover;
-}
-
-#section-3 .heading-1, #section-3 .para-2 {
-	color: #f5f5f5 !important;
-	text-shadow: 4px 4px 4px #53545e;
-}
-
-#section-3 .heading-1 {
-	font-family: 'Righteous';
-	margin-top: 20%;
-	margin-bottom: 4%;
-	width: 80%;
-}
-
-#section-3 .para-2 {
-	font-family: 'Ubuntu'; 
-	width: 80%;
-	margin-bottom: 7%;
-}
-
-#section-3 .btn {
-	margin-bottom: 15%;
-	width: 40%;
-	padding: 1% 5%;
-}
-
 #section-3 .swiper-container {
 	width: 100%;
 	max-height: 485px;
@@ -208,7 +181,6 @@ body {
 	width: 90%;
 	margin: auto;
 	max-width: 790px;
-	padding-top: 6%;
 	padding-bottom: 6%;
 }
 
@@ -294,6 +266,8 @@ form .inner-form {
 	background: #62E492;
 }
 
+
+/* Responsive */
 @media screen and (max-width: 992px) {
 	.s130 form .inner-form .input-field {
 		height: 40px;
@@ -318,8 +292,8 @@ form .inner-form {
 		display: none;
 	}
 
-	#section-2 .cari-tahu p,
-	#section-2 .cari-tahu a {
+	#section-1 .cari-tahu p,
+	#section-1 .cari-tahu a {
 		display: none;
 	}
 

@@ -7,9 +7,9 @@ $(window).scroll(function(){
 	}
 });
 
-$('#section-2 .container .btn').on('click', function(e) {
+$('#section-1 .cari-tahu a').on('click', function(e) {
 	$('html, body').animate({
-			scrollTop: $($(this).attr('href')).offset().top + 23
+			scrollTop: $($(this).attr('href')).offset().top - 115
 		}, 1000, "easeInOutExpo");
 	e.preventDefault();
 });
